@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 # EKS Cluster
 resource "aws_eks_cluster" "this" {
   name     = "${var.project}-cluster"
