@@ -21,12 +21,12 @@ pipeline{
         } 
     } 
     }
-     stage('terraform destroy') { 
-    steps { 
-        withCredentials([aws(accessKeyVariable:'AWS_ACCESS_KEY_ID', credentialsId: 'gulzat-aws-id', secretKeyVarible: 'AWS_SECRET_ACCESS_KEY')]) { 
-        sh 'terraform destroy -auto-approve ' 
-        } 
-    } 
+//      stage('terraform destroy') { 
+//     steps { 
+//         withCredentials([aws(accessKeyVariable:'AWS_ACCESS_KEY_ID', credentialsId: 'gulzat-aws-id', secretKeyVarible: 'AWS_SECRET_ACCESS_KEY')]) { 
+//         sh 'terraform destroy -auto-approve ' 
+//         } 
+//     } 
       } 
  } 
 }
