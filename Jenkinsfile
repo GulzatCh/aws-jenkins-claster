@@ -35,7 +35,7 @@ pipeline{
         credentialsId: 'gulzat-aws-id',
         accessKeyVariable: 'AWS_ACCESS_KEY_ID',
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-        sh 'aws eks update-kubeconfig --region us-east-1 --name dev-eks'
+        sh 'aws eks update-kubeconfig --region us-east-1 --name cluster-cluster'
         sh 'kubectl create -f simple.yml'
                 }
             }
